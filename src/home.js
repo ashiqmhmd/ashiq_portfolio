@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import {
-    Menu, X, Mail, ExternalLink, Signal, Wifi, BatteryFull,
+    Menu, X, Mail, ExternalLink,
     Smartphone, Globe, ArrowUpRight, Code2, Server, Database, Wrench, MapPin,
     ChevronRight, Send, ChevronLeft, ZoomIn, Play, Apple, Briefcase
 } from "lucide-react";
@@ -520,43 +520,6 @@ export function ExpandedDeviceModal({ project, onClose }) {
     );
 }
 
-/* ---------------------------------------------------------
-   STATUS BAR — a real, ticking nod to the mobile-dev identity
---------------------------------------------------------- */
-
-// function StatusBar() {
-//     const [time, setTime] = useState(new Date());
-//     useEffect(() => {
-//         const id = setInterval(() => setTime(new Date()), 1000 * 30);
-//         return () => clearInterval(id);
-//     }, []);
-//     const hh = time.getHours() % 12 || 12;
-//     const mm = String(time.getMinutes()).padStart(2, "0");
-//     const ampm = time.getHours() >= 12 ? "PM" : "AM";
-
-//     return (
-//         <div
-//             style={{
-//                 background: "#05070C",
-//                 borderBottom: "1px solid var(--border)",
-//                 fontFamily: "'JetBrains Mono', monospace",
-//             }}
-//             className="w-full text-[11px] px-4 sm:px-6 py-[6px] flex items-center justify-between select-none"
-//         >
-//             <span style={{ color: "var(--text-muted)" }}>
-//                 {hh}:{mm} {ampm}
-//             </span>
-//             <span className="hidden sm:inline" style={{ color: "var(--accent-2)", letterSpacing: "0.08em" }}>
-//                 MOHAMMED ASHIQ — PORTFOLIO.APP
-//             </span>
-//             <span className="flex items-center gap-[6px]" style={{ color: "var(--text-muted)" }}>
-//                 <Signal size={11} strokeWidth={2.2} />
-//                 <Wifi size={11} strokeWidth={2.2} />
-//                 <BatteryFull size={13} strokeWidth={2.2} />
-//             </span>
-//         </div>
-//     );
-// }
 
 /* ---------------------------------------------------------
    NAV
