@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Portfolio from './home';
+import AllProjects from './projects';
 
 function App() {
+  const [currentRoute, setCurrentRoute] = useState(() => {
+    return window.location.hash || '#/';
+  });
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentRoute(window.location.hash || '#/');
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentRoute]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {currentRoute === '#/projects' ? (
+        <AllProjects />
+      ) : (
+        <Portfolio />
+      )}
+    </>
   );
 }
 

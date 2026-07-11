@@ -1,13 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0B0F1A;
+  --surface: #131826;
+  --surface-2: #1B2233;
+  --accent: #8B5CF6;
+  --accent-2: #D4FF3D;
+  --text: #F4F2ED;
+  --text-muted: #8A93A8;
+  --border: rgba(255,255,255,0.08);
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input::placeholder, textarea::placeholder { 
+  color: #5b6478; 
+}
+
+input:focus, textarea:focus { 
+  border-color: rgba(255,255,255,0.3) !important; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { 
+    animation: none !important; 
+    transition: none !important; 
+  }
+}
+
+.project-device {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.group:hover .project-device {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.revolve-drop-span {
+  display: inline-block;
+  opacity: 0;
+  transform: translate(0, -100px) rotate(360deg) scale(0);
+  animation: revolveDrop .3s forwards;
+}
+
+@keyframes revolveDrop {
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+
+  60% {
+    transform: translate(0, 20px) scale(.8) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.revolve-drop-container:hover .revolve-drop-span {
+  animation: revolveDropHover .3s forwards;
+}
+
+@keyframes revolveDropHover {
+  0% {
+    transform: translate(0, -100px) rotate(360deg) scale(0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+
+  60% {
+    transform: translate(0, 20px) scale(.8) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
 }
