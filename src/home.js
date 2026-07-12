@@ -289,74 +289,46 @@ export function ExpandedDeviceModal({ project, onClose }) {
 
     return createPortal(
         <div
-            className="fixed inset-0 bg-[#05070C]/90 backdrop-blur-md z-[100] flex items-center justify-center p-4 sm:p-6 cursor-zoom-out animate-fade-in"
+            className="fixed inset-0 bg-[#05070C]/90 backdrop-blur-md z-[100] overflow-y-auto cursor-zoom-out animate-fade-in"
             onClick={onClose}
         >
             <button
                 onClick={onClose}
-                className="absolute top-6 right-6 w-10 h-10 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition duration-200 flex items-center justify-center text-white cursor-pointer z-[110]"
+                className="fixed top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 rounded-full border border-white/10 bg-[#05070C]/80 hover:bg-white/10 hover:border-white/20 transition duration-200 flex items-center justify-center text-white cursor-pointer z-[120] backdrop-blur-sm"
                 aria-label="Close modal"
             >
                 <X size={20} />
             </button>
 
             <div
-                className="relative flex flex-col items-center justify-center cursor-default w-full max-w-4xl"
-                onClick={(e) => e.stopPropagation()}
+                className="min-h-full flex items-center justify-center p-4 sm:p-6 md:p-10"
             >
-                <div className="flex flex-col lg:flex-row gap-10 items-center justify-center w-full">
-                    <div className="flex-shrink-0 flex items-center justify-center relative">
-                        {isMobile ? (
-                            <div
-                                style={{
-                                    border: "12px solid #1B2233",
-                                    borderRadius: "44px",
-                                    background: "#05070C",
-                                    width: "280px",
-                                    boxShadow: "0 25px 50px -12px rgba(0,0,0,0.8), 0 0 40px rgba(139,92,246,0.15)",
-                                    overflow: "hidden"
-                                }}
-                                className="relative select-none"
-                            >
-                                <div
-                                    className="absolute top-2.5 left-1/2 -translate-x-1/2 w-16 h-4 bg-black rounded-full z-20 flex items-center justify-center"
-                                    style={{ pointerEvents: "none" }}
-                                >
-                                    <div style={{ width: "30px", height: "3px", background: "#1B2233", borderRadius: "2px" }} />
-                                </div>
-
-                                <div style={{ height: "500px", position: "relative" }} className="overflow-hidden">
-                                    <div
-                                        className="w-full h-full flex transition-transform duration-500 ease-in-out"
-                                        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-                                    >
-                                        {images.map((img, idx) => (
-                                            <img
-                                                key={idx}
-                                                src={img}
-                                                alt={`Screenshot ${idx}`}
-                                                style={{ width: "100%", height: "100%", objectFit: "cover", flexShrink: 0 }}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="flex flex-col items-center w-full max-w-2xl select-none">
+                <div
+                    className="relative flex flex-col items-center justify-center cursor-default w-full max-w-4xl"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <div className="flex flex-col lg:flex-row gap-10 items-center justify-center w-full">
+                        <div className="flex-shrink-0 flex items-center justify-center relative px-8 lg:px-0">
+                            {isMobile ? (
                                 <div
                                     style={{
-                                        border: "12px solid #1F242F",
-                                        borderRadius: "20px 20px 0 0",
+                                        border: "12px solid #1B2233",
+                                        borderRadius: "44px",
                                         background: "#05070C",
-                                        width: "100%",
-                                        boxShadow: "0 25px 50px -12px rgba(0,0,0,0.8)",
+                                        width: "280px",
+                                        boxShadow: "0 25px 50px -12px rgba(0,0,0,0.8), 0 0 40px rgba(139,92,246,0.15)",
                                         overflow: "hidden"
                                     }}
-                                    className="relative"
+                                    className="relative select-none"
                                 >
-                                    <span className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white/20 rounded-full z-20" />
+                                    <div
+                                        className="absolute top-2.5 left-1/2 -translate-x-1/2 w-16 h-4 bg-black rounded-full z-20 flex items-center justify-center"
+                                        style={{ pointerEvents: "none" }}
+                                    >
+                                        <div style={{ width: "30px", height: "3px", background: "#1B2233", borderRadius: "2px" }} />
+                                    </div>
 
-                                    <div style={{ height: "320px", position: "relative", overflow: "hidden" }}>
+                                    <div style={{ height: "500px", position: "relative" }} className="overflow-hidden">
                                         <div
                                             className="w-full h-full flex transition-transform duration-500 ease-in-out"
                                             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -372,146 +344,178 @@ export function ExpandedDeviceModal({ project, onClose }) {
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    style={{
-                                        background: "linear-gradient(to bottom, #2d3345, #1B2233)",
-                                        width: "112%",
-                                        height: "12px",
-                                        borderRadius: "0 0 12px 12px",
-                                        boxShadow: "0 10px 20px rgba(0,0,0,0.5)"
-                                    }}
-                                    className="relative"
-                                >
+                            ) : (
+                                <div className="flex flex-col items-center w-[88%] sm:w-full max-w-2xl select-none">
                                     <div
                                         style={{
-                                            background: "#0F1420",
-                                            width: "60px",
-                                            height: "6px",
-                                            borderRadius: "0 0 6px 6px"
+                                            border: "12px solid #1F242F",
+                                            borderRadius: "20px 20px 0 0",
+                                            background: "#05070C",
+                                            width: "100%",
+                                            boxShadow: "0 25px 50px -12px rgba(0,0,0,0.8)",
+                                            overflow: "hidden"
                                         }}
-                                        className="absolute top-0 left-1/2 -translate-x-1/2"
-                                    />
-                                </div>
-                            </div>
-                        )}
+                                        className="relative"
+                                    >
+                                        <span className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white/20 rounded-full z-20" />
 
-                        {images.length > 1 && (
-                            <>
-                                <button
-                                    onClick={prevImage}
-                                    style={{
-                                        border: "1px solid var(--border)",
-                                        background: "rgba(11,15,26,0.6)",
-                                        backdropFilter: "blur(4px)"
-                                    }}
-                                    className="absolute -left-4 lg:-left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center hover:border-white/30 text-white transition hover:scale-105"
-                                >
-                                    <ChevronLeft size={20} />
-                                </button>
-                                <button
-                                    onClick={nextImage}
-                                    style={{
-                                        border: "1px solid var(--border)",
-                                        background: "rgba(11,15,26,0.6)",
-                                        backdropFilter: "blur(4px)"
-                                    }}
-                                    className="absolute -right-4 lg:-right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center hover:border-white/30 text-white transition hover:scale-105"
-                                >
-                                    <ChevronRight size={20} />
-                                </button>
-                            </>
-                        )}
-                    </div>
-
-                    <div
-                        style={{
-                            border: "1px solid var(--border)",
-                            background: "rgba(255,255,255,0.02)",
-                            backdropFilter: "blur(8px)"
-                        }}
-                        className="p-6 sm:p-8 rounded-2xl max-w-md w-full"
-                    >
-                        <div className="flex items-center gap-2 mb-3">
-                            {isMobile ? <Smartphone size={16} color="var(--accent-2)" /> : <Globe size={16} color="var(--accent-2)" />}
-                            <span style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-muted)" }} className="text-xs uppercase tracking-wider">
-                                {isMobile ? "Mobile app" : "Web app"} · {project.year}
-                            </span>
-                        </div>
-                        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "var(--text)" }} className="text-2xl font-bold mb-1">
-                            {project.name}
-                        </h2>
-                        <p style={{ color: "var(--accent-2)" }} className="text-sm font-medium mb-4">{project.tagline}</p>
-
-                        <p style={{ color: "var(--text-muted)", fontFamily: "'Inter', sans-serif" }} className="text-sm leading-relaxed mb-6">
-                            {project.description}
-                        </p>
-
-                        <div className="mb-6">
-                            <div style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-muted)" }} className="text-[10px] tracking-wider uppercase mb-2">
-                                Technologies used
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {project.stack.map((s) => (
-                                    <Tag key={s}>{s}</Tag>
-                                ))}
-                            </div>
-                        </div>
-
-                        {(project.playstore || project.appstore) && (
-                            <div className="mb-6">
-                                <div style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-muted)" }} className="text-[10px] tracking-wider uppercase mb-3">
-                                    Get the app
-                                </div>
-                                <div className="flex flex-wrap gap-2.5">
-                                    {project.playstore && (
-                                        <a
-                                            href={project.playstore}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            style={{
-                                                border: "1px solid var(--border)",
-                                                background: "rgba(255,255,255,0.02)",
-                                                fontFamily: "'JetBrains Mono', monospace",
-                                            }}
-                                            className="flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white hover:border-white/20 hover:bg-white/5 transition duration-200"
-                                        >
-                                            <Play size={12} fill="currentColor" /> Google Play
-                                        </a>
-                                    )}
-                                    {project.appstore && (
-                                        <a
-                                            href={project.appstore}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            style={{
-                                                border: "1px solid var(--border)",
-                                                background: "rgba(255,255,255,0.02)",
-                                                fontFamily: "'JetBrains Mono', monospace",
-                                            }}
-                                            className="flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white hover:border-white/20 hover:bg-white/5 transition duration-200"
-                                        >
-                                            <Apple size={12} fill="currentColor" /> App Store
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                        )}
-
-                        {images.length > 1 && (
-                            <div className="flex justify-center gap-1.5 mt-2">
-                                {images.map((_, idx) => (
-                                    <button
-                                        key={idx}
-                                        onClick={(e) => { e.stopPropagation(); setActiveIndex(idx); }}
-                                        className="w-2 h-2 rounded-full transition-all"
+                                        <div style={{ aspectRatio: "16/10", position: "relative", overflow: "hidden" }} className="w-full">
+                                            <div
+                                                className="w-full h-full flex transition-transform duration-500 ease-in-out"
+                                                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                                            >
+                                                {images.map((img, idx) => (
+                                                    <img
+                                                        key={idx}
+                                                        src={img}
+                                                        alt={`Screenshot ${idx}`}
+                                                        style={{ width: "100%", height: "100%", objectFit: "cover", flexShrink: 0 }}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
                                         style={{
-                                            background: idx === activeIndex ? "var(--accent-2)" : "rgba(255,255,255,0.2)",
-                                            transform: idx === activeIndex ? "scale(1.2)" : "scale(1)"
+                                            background: "linear-gradient(to bottom, #2d3345, #1B2233)",
+                                            width: "112%",
+                                            height: "12px",
+                                            borderRadius: "0 0 12px 12px",
+                                            boxShadow: "0 10px 20px rgba(0,0,0,0.5)"
                                         }}
-                                    />
-                                ))}
+                                        className="relative"
+                                    >
+                                        <div
+                                            style={{
+                                                background: "#0F1420",
+                                                width: "60px",
+                                                height: "6px",
+                                                borderRadius: "0 0 6px 6px"
+                                            }}
+                                            className="absolute top-0 left-1/2 -translate-x-1/2"
+                                        />
+                                    </div>
+                                </div>
+                            )}
+
+                            {images.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={prevImage}
+                                        style={{
+                                            border: "1px solid var(--border)",
+                                            background: "rgba(11,15,26,0.6)",
+                                            backdropFilter: "blur(4px)"
+                                        }}
+                                        className="absolute -left-4 lg:-left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center hover:border-white/30 text-white transition hover:scale-105"
+                                    >
+                                        <ChevronLeft size={20} />
+                                    </button>
+                                    <button
+                                        onClick={nextImage}
+                                        style={{
+                                            border: "1px solid var(--border)",
+                                            background: "rgba(11,15,26,0.6)",
+                                            backdropFilter: "blur(4px)"
+                                        }}
+                                        className="absolute -right-4 lg:-right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center hover:border-white/30 text-white transition hover:scale-105"
+                                    >
+                                        <ChevronRight size={20} />
+                                    </button>
+                                </>
+                            )}
+                        </div>
+
+                        <div
+                            style={{
+                                border: "1px solid var(--border)",
+                                background: "rgba(255,255,255,0.02)",
+                                backdropFilter: "blur(8px)"
+                            }}
+                            className="p-6 sm:p-8 rounded-2xl max-w-md w-full"
+                        >
+                            <div className="flex items-center gap-2 mb-3">
+                                {isMobile ? <Smartphone size={16} color="var(--accent-2)" /> : <Globe size={16} color="var(--accent-2)" />}
+                                <span style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-muted)" }} className="text-xs uppercase tracking-wider">
+                                    {isMobile ? "Mobile app" : "Web app"} · {project.year}
+                                </span>
                             </div>
-                        )}
+                            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "var(--text)" }} className="text-2xl font-bold mb-1">
+                                {project.name}
+                            </h2>
+                            <p style={{ color: "var(--accent-2)" }} className="text-sm font-medium mb-4">{project.tagline}</p>
+
+                            <p style={{ color: "var(--text-muted)", fontFamily: "'Inter', sans-serif" }} className="text-sm leading-relaxed mb-6">
+                                {project.description}
+                            </p>
+
+                            <div className="mb-6">
+                                <div style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-muted)" }} className="text-[10px] tracking-wider uppercase mb-2">
+                                    Technologies used
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {project.stack.map((s) => (
+                                        <Tag key={s}>{s}</Tag>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {(project.playstore || project.appstore) && (
+                                <div className="mb-6">
+                                    <div style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-muted)" }} className="text-[10px] tracking-wider uppercase mb-3">
+                                        Get the app
+                                    </div>
+                                    <div className="flex flex-wrap gap-2.5">
+                                        {project.playstore && (
+                                            <a
+                                                href={project.playstore}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                style={{
+                                                    border: "1px solid var(--border)",
+                                                    background: "rgba(255,255,255,0.02)",
+                                                    fontFamily: "'JetBrains Mono', monospace",
+                                                }}
+                                                className="flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white hover:border-white/20 hover:bg-white/5 transition duration-200"
+                                            >
+                                                <Play size={12} fill="currentColor" /> Google Play
+                                            </a>
+                                        )}
+                                        {project.appstore && (
+                                            <a
+                                                href={project.appstore}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                style={{
+                                                    border: "1px solid var(--border)",
+                                                    background: "rgba(255,255,255,0.02)",
+                                                    fontFamily: "'JetBrains Mono', monospace",
+                                                }}
+                                                className="flex items-center gap-2 text-xs px-4 py-2 rounded-full text-white hover:border-white/20 hover:bg-white/5 transition duration-200"
+                                            >
+                                                <Apple size={12} fill="currentColor" /> App Store
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
+                            {images.length > 1 && (
+                                <div className="flex justify-center gap-1.5 mt-2">
+                                    {images.map((_, idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={(e) => { e.stopPropagation(); setActiveIndex(idx); }}
+                                            className="w-2 h-2 rounded-full transition-all"
+                                            style={{
+                                                background: idx === activeIndex ? "var(--accent-2)" : "rgba(255,255,255,0.2)",
+                                                transform: idx === activeIndex ? "scale(1.2)" : "scale(1)"
+                                            }}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
