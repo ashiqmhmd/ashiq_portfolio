@@ -7,6 +7,8 @@ import ecommerseImg2 from "./resources/ecommerse3.png";
 import pos1 from "./resources/pos1.png"
 import pos2 from "./resources/pos2.png"
 import pos3 from "./resources/pos3.png"
+import pos4 from "./resources/pos4.png"
+import pos5 from "./resources/pos5.png"
 import vote1 from "./resources/vote1.png"
 import vote2 from "./resources/vote2.png"
 import vote3 from "./resources/vote3.png"
@@ -64,13 +66,13 @@ export const PROJECTS = [
         images: [ecommerseImg, ecommerseImg1, ecommerseImg2,],
     },
     {
-        name: "Khahabi Billing",
+        name: "Zyqiq POS",
         type: "mobile",
         tagline: "POS Billing, Stock & Inventory Management",
-        description: "AWholesale and  retail billing and business management application that streamlines point-of-sale operations, inventory tracking, customer management, invoice generation, and sales reporting through a fast and intuitive interface.",
-        stack: ["React Native", "Asyncstorage", "Redux", "TypeScript"],
+        description: "A wholesale and  retail billing and business management application that streamlines point-of-sale operations, inventory tracking, customer management, invoice generation, and sales reporting through a fast and intuitive interface.",
+        stack: ["React Native", "Asyncstorage", "Redux", "TypeScript", "AWS", "MongoDB"],
         year: "2026",
-        images: [pos1, pos2, pos3]
+        images: [pos1, pos2, pos3, pos4, pos5]
     },
     {
         name: "VoteMarkinApp",
