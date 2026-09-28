@@ -4,6 +4,10 @@ import credit3Img from "./resources/credit3.png";
 import ecommerseImg from "./resources/ecommerse.png";
 import ecommerseImg1 from "./resources/ecommerse2.png";
 import ecommerseImg2 from "./resources/ecommerse3.png";
+import ecommerseImg3 from "./resources/ecommerse-mob.png";
+import ecommerseImg4 from "./resources/ecommerse-mob1.png";
+import ecommerseImg5 from "./resources/ecommerse-mob2.png";
+import ecommerseImg6 from "./resources/ecommerse-mob3.png";
 import pos1 from "./resources/pos1.png"
 import pos2 from "./resources/pos2.png"
 import pos3 from "./resources/pos3.png"
@@ -43,6 +47,10 @@ import psmanager1 from "./resources/psmanager1.jpg"
 import psmanager2 from "./resources/psmanager2.jpg"
 import psmanager3 from "./resources/psmanager3.jpg"
 import psmanager4 from "./resources/psmanager4.jpg"
+import Gnet from "./resources/Gnet.png"
+import Gnet2 from "./resources/Gnet2.png"
+import Gnet3 from "./resources/Gnet3.png"
+import Gnet4 from "./resources/Gnet4.png"
 
 export const PROJECTS = [
     {
@@ -66,6 +74,15 @@ export const PROJECTS = [
         images: [ecommerseImg, ecommerseImg1, ecommerseImg2,],
     },
     {
+        name: "SmartEnergy Mobile",
+        type: "mobile",
+        tagline: "Electronic E-Commerse store",
+        description: "A modern electronics e-commerce platform with product catalog management, shopping cart, order processing, inventory management, user authentication, and secure payment integration.",
+        stack: ["React Native", "Asyncstorage", "Redux", "TypeScript", "AWS", "MongoDB"],
+        year: "2026",
+        images: [ecommerseImg3, ecommerseImg4, ecommerseImg5, ecommerseImg6]
+    },
+    {
         name: "Zyqiq POS",
         type: "mobile",
         tagline: "POS Billing, Stock & Inventory Management",
@@ -73,6 +90,15 @@ export const PROJECTS = [
         stack: ["React Native", "Asyncstorage", "Redux", "TypeScript", "AWS", "MongoDB"],
         year: "2026",
         images: [pos1, pos2, pos3, pos4, pos5]
+    },
+    {
+        name: "Gnet Food Delivery",
+        type: "mobile",
+        tagline: "Smart Food Ordering & Delivery, Built for Saudi Arabia",
+        description: "A modern food delivery and digital pickup platform designed for the Saudi market, connecting customers with restaurants through seamless food discovery, real-time order tracking, smart cart management, and flexible delivery or takeaway options. The app also features automated order token management and live order status updates to create a faster and more efficient ordering experience.",
+        stack: ["React Native", "TypeScript", "Redux Toolkit", "Node.js", "WebSockets", "Google Maps API", "AWS", "MongoDB"],
+        year: "2026",
+        images: [Gnet, Gnet2, Gnet3, Gnet4,]
     },
     {
         name: "VoteMarkinApp",
