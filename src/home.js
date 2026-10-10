@@ -156,17 +156,23 @@ const EXPERIENCE = [
         role: "Co-Founder & Full-Stack Developer",
         org: "Zypheron Solutions",
         detail:
-            "Co-founded Zypheron Solutions, delivering end-to-end software solutions including cross-platform mobile apps, web applications, backend services, cloud integrations, and database architecture, while collaborating closely with clients to transform ideas into production-ready products.    "
+            "Co-founded Zypheron Solutions, delivering end-to-end software solutions including cross-platform mobile apps, web applications, backend services, cloud integrations, and database architecture. Collaborated closely with clients to transform ideas into production-ready products."
     },
     {
         period: "2021 — 2023",
         role: "React Native Developer",
         org: "Playspots",
         detail:
-            "Developed the organization’s Turf Booking and Management applications using React Native, along with other client projects, published production builds to the Google Play Store and Apple App Store, integrated Sentry for crash monitoring, and enhanced application performance through continuous optimization."
-
+            "Developed the organization's Turf Booking and Management applications using React Native, along with other client projects. Published production builds to the Google Play Store and Apple App Store, integrated Sentry for crash monitoring, and enhanced application performance through continuous optimization."
     },
-
+    {
+        period: "2020 — 2021",
+        role: "Software Developer Intern (Hybrid)",
+        org: "Ciferz Tech",
+        location: "Manjeri, Kerala, India",
+        detail:
+            "Started my professional journey in the software industry while pursuing a Diploma in Computer Engineering through a hybrid work and internship opportunity. Learned and worked with Java, Spring Boot, and React, developing multiple frontend components and backend modules. Gained practical experience in web application development, business logic implementation, REST API development, and full-stack fundamentals."
+    }
 ];
 
 /* ---------------------------------------------------------

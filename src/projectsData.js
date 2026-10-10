@@ -51,8 +51,53 @@ import Gnet from "./resources/Gnet.png"
 import Gnet2 from "./resources/Gnet2.png"
 import Gnet3 from "./resources/Gnet3.png"
 import Gnet4 from "./resources/Gnet4.png"
+import csms1 from './resources/csms1.png'
+import csms2 from './resources/csms2.png'
+import csms3 from './resources/csms3.png'
+import csms4 from './resources/csms4.png'
+import csms5 from './resources/csms5.png'
+import elm1 from './resources/elmelone1.png'
+import elm2 from './resources/elmelone2.png'
+import elm3 from './resources/elmelone3.png'
+import elm4 from './resources/elmelone4.png'
+import elm5 from './resources/elmelone5.png'
+import elm6 from './resources/elemlone6.png'
+import elm7 from './resources/elmelone7.png'
+import elm8 from './resources/elmelone8.png'
+import obd1 from './resources/obd1.jpeg'
+import obd2 from './resources/obd2.jpeg'
+import obd3 from './resources/obd3.jpeg'
+import english from './resources/english1.png'
+import english2 from './resources/english2.png'
+import english3 from './resources/english3.png'
+import english4 from './resources/english4.png'
+
 
 export const PROJECTS = [
+
+    {
+        name: "Playspots User",
+        type: "mobile",
+        tagline: "Turf booking & Managing app for users side",
+        description: "A users side turf booking and payment management application that helps users to book turfs, payments, and customers",
+        stack: ["React Native", "Redux", "Node.js", "MongoDB", "asyncstorage", "firebase", "python", "sentry", "aws",],
+        year: "2023",
+        images: [psUser1, psUser2, psUser3, psUser4],
+        playstore: "https://play.google.com/store/apps/details?id=com.playspots",
+        appstore: "https://apps.apple.com/in/app/playspots-sports-facilities/id1451481887"
+    },
+    {
+        name: "Playspots Manager",
+        type: "mobile",
+        tagline: "Turf managers app for manage their turfs",
+        description: "A turf managers app that enables turf owners to manage their turfs, bookings, payments, and customers",
+        stack: ["React Native", "Redux", "AsyncStorage", "Node.js", "MongoDB", "Firebase", ".Net", "AWS"],
+        year: "2025",
+        images: [psmanager1, psmanager2, psmanager3, psmanager4],
+        playstore: "https://play.google.com/store/apps/details?id=com.playspots.manager",
+        appstore: "https://apps.apple.com/in/app/playspots-manager/id1456987704"
+    },
+
     {
         name: "Credit Manger",
         type: "mobile",
@@ -101,6 +146,51 @@ export const PROJECTS = [
         images: [Gnet, Gnet2, Gnet3, Gnet4,]
     },
     {
+        name: "Playspots admin",
+        type: "mobile",
+        tagline: "Turf booking & Managing app for admin side",
+        description: "A admin side turf booking and payment management application that helps turf owners to manage their turfs, bookings, payments, and customers",
+        stack: ["React Native", "Redux", "Node.js", "MongoDB", "asyncstorage", "firebase", "python", "sentry", "aws",],
+        year: "2023",
+        images: [psadmin1, psadmin2, psadmin3,],
+    },
+    {
+        name: "MES UAE Alumini",
+        type: "mobile",
+        tagline: "Connect, Network & Grow Together",
+        description: "A college alumni platform that enables graduates to browse the alumni directory, search members by batch and blood group, view digital membership cards, receive announcements, explore events, and stay connected with the alumni community through a secure mobile application.",
+        stack: ["React Native", "Redux", "AsyncStorage", "Node.js", "MongoDB", "Firebase", ".Net", "AWS"],
+        year: "2025",
+        images: [Alumini1, Alumini2, Alumini3, Alumini4],
+    },
+    {
+        name: "EleMelone Diet Solution",
+        type: "web",
+        tagline: "Personalized diet planning and nutrition management solution",
+        description:
+            "A diet and nutrition management platform designed to support personalized diet plans, client management, and communication between dietitians and their clients, with Twilio integration for messaging and notifications.",
+        stack: ["React", "HTML", "CSS", "Java", "Spring Boot", "Twilio"],
+        year: "2021",
+        images: [elm1, elm2, elm3, elm4, elm5, elm6, elm7, elm8],
+    },
+
+    {
+        name: "CSMS - Customer Service Management System",
+        type: "web",
+        tagline: "Automated mobile repair management and technician assignment system",
+        description:
+            "A mobile phone repair management platform that allows customers to register complaints online, submit device and issue details, and track repair status. Automatically assigns repair jobs to available technicians. Technicians can log in to view assigned jobs and update repair statuses, while administrators manage complaints, technicians, job assignments, and the entire repair workflow through a centralized dashboard.",
+        stack: [
+            "Java",
+            "Spring Boot",
+            "Flutter",
+            "MySQL",
+            "REST APIs"
+        ],
+        year: "2021",
+        images: [csms1, csms2, csms3, csms4, csms5]
+    },
+    {
         name: "VoteMarkinApp",
         type: "mobile",
         tagline: "Vote marking application for localbody",
@@ -146,44 +236,38 @@ export const PROJECTS = [
         year: "2025",
         images: [st1, st2, st3,],
     },
+
+
     {
-        name: "Playspots admin",
+        name: "OBD Scanner & Vehicle Monitor",
         type: "mobile",
-        tagline: "Turf booking & Managing app for admin side",
-        description: "A admin side turf booking and payment management application that helps turf owners to manage their turfs, bookings, payments, and customers",
-        stack: ["React Native", "Redux", "Node.js", "MongoDB", "asyncstorage", "firebase", "python", "sentry", "aws",],
-        year: "2023",
-        images: [psadmin1, psadmin2, psadmin3,],
+        tagline: "Real-time vehicle diagnostics and performance monitoring",
+        description:
+            "A vehicle monitoring application that connects to an OBD-II scanner via Bluetooth to retrieve and display real-time vehicle data. Monitors fuel level, vehicle speed, acceleration, engine coolant temperature, and other diagnostic parameters, helping users track vehicle performance and identify potential issues through live data readings.",
+        stack: [
+            "React Native",
+            "RNBluetoothClassic",
+            "OBD-II",
+            "Bluetooth"
+        ],
+        year: "2026",
+        images: [obd1, obd2, obd3,]
     },
     {
-        name: "MES UAE Alumini",
+        name: "FluentAI - AI English Learning App",
         type: "mobile",
-        tagline: "Connect, Network & Grow Together",
-        description: "A college alumni platform that enables graduates to browse the alumni directory, search members by batch and blood group, view digital membership cards, receive announcements, explore events, and stay connected with the alumni community through a secure mobile application.",
-        stack: ["React Native", "Redux", "AsyncStorage", "Node.js", "MongoDB", "Firebase", ".Net", "AWS"],
-        year: "2025",
-        images: [Alumini1, Alumini2, Alumini3, Alumini4],
-    },
-    {
-        name: "Playspots User",
-        type: "mobile",
-        tagline: "Turf booking & Managing app for users side",
-        description: "A users side turf booking and payment management application that helps users to book turfs, payments, and customers",
-        stack: ["React Native", "Redux", "Node.js", "MongoDB", "asyncstorage", "firebase", "python", "sentry", "aws",],
-        year: "2023",
-        images: [psUser1, psUser2, psUser3, psUser4],
-        playstore: "https://play.google.com/store/apps/details?id=com.playspots",
-        appstore: "https://apps.apple.com/in/app/playspots-sports-facilities/id1451481887"
-    },
-    {
-        name: "Playspots Manager",
-        type: "mobile",
-        tagline: "Turf managers app for manage their turfs",
-        description: "A turf managers app that enables turf owners to manage their turfs, bookings, payments, and customers",
-        stack: ["React Native", "Redux", "AsyncStorage", "Node.js", "MongoDB", "Firebase", ".Net", "AWS"],
-        year: "2025",
-        images: [psmanager1, psmanager2, psmanager3, psmanager4],
-        playstore: "https://play.google.com/store/apps/details?id=com.playspots.manager",
-        appstore: "https://apps.apple.com/in/app/playspots-manager/id1456987704"
+        tagline: "Improve your English speaking skills with your personal AI tutor",
+        description:
+            "An AI-powered English learning application that helps users improve their spoken English through real-time voice conversations with an AI tutor. Users can practice everyday conversations, improve pronunciation, correct grammar mistakes, expand vocabulary, and receive instant feedback on their speaking skills. The app offers interactive speaking sessions, personalized learning recommendations, progress tracking, and conversation topics for different proficiency levels, helping users build confidence and fluency in English.",
+        stack: [
+            "React Native",
+            "TypeScript",
+            "Gemini AI",
+            "Speech Recognition",
+            "Text-to-Speech",
+            "REST APIs"
+        ],
+        year: "2026",
+        images: [english, english2, english3, english4]
     }
 ];
