@@ -5,9 +5,6 @@ import {
     Smartphone, Globe, ArrowUpRight, Code2, Server, Database, Wrench, MapPin,
     ChevronRight, Send, ChevronLeft, ZoomIn, Play, Apple, Briefcase,
     Phone,
-    Locate,
-    LocationEdit,
-    Map,
     MapPinIcon,
     Calendar,
     Flag,
@@ -1414,15 +1411,29 @@ function Contact() {
                         <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
                             <Flag size={16} color="var(--accent-2)" /> Indian
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
-                            <User size={16} color="var(--accent-2)" /> Single
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
-                            <Calendar size={16} color="var(--accent-2)" /> 29/06/2000
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
-                            <MapPinIcon size={16} color="var(--accent-2)" /> Al Majas-1 ,Sharjah,UAE
-                        </a>
+                        <div
+                            className="flex items-center gap-3 text-sm"
+                            style={{ color: "var(--text-muted)" }}
+                        >
+                            <User size={16} color="var(--accent-2)" />
+                            Single
+                        </div>
+
+                        <div
+                            className="flex items-center gap-3 text-sm"
+                            style={{ color: "var(--text-muted)" }}
+                        >
+                            <Calendar size={16} color="var(--accent-2)" />
+                            29/06/2000
+                        </div>
+
+                        <div
+                            className="flex items-center gap-3 text-sm"
+                            style={{ color: "var(--text-muted)" }}
+                        >
+                            <MapPinIcon size={16} color="var(--accent-2)" />
+                            Al Majas-1, Sharjah, UAE
+                        </div>
                         <a href="tel:+971552522141" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
                             <Phone size={16} color="var(--accent-2)" /> +971 552522141
                         </a>
