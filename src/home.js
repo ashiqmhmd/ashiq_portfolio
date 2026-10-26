@@ -1408,9 +1408,13 @@ function Contact() {
                         My inbox is open.
                     </p>
                     <div className="flex flex-col gap-4">
-                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
-                            <Flag size={16} color="var(--accent-2)" /> Indian
-                        </a>
+                        <div
+                            className="flex items-center gap-3 text-sm"
+                            style={{ color: "var(--text-muted)" }}
+                        >
+                            <Flag size={16} color="var(--accent-2)" />
+                            Indian
+                        </div>
                         <div
                             className="flex items-center gap-3 text-sm"
                             style={{ color: "var(--text-muted)" }}
