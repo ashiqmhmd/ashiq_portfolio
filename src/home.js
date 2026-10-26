@@ -3,12 +3,20 @@ import { createPortal } from "react-dom";
 import {
     Menu, X, Mail, ExternalLink,
     Smartphone, Globe, ArrowUpRight, Code2, Server, Database, Wrench, MapPin,
-    ChevronRight, Send, ChevronLeft, ZoomIn, Play, Apple, Briefcase
+    ChevronRight, Send, ChevronLeft, ZoomIn, Play, Apple, Briefcase,
+    Phone,
+    Locate,
+    LocationEdit,
+    Map,
+    MapPinIcon,
+    Calendar,
+    Flag,
+    User
 } from "lucide-react";
 import AshiqImg from "./resources/Ashiq.png";
 import { PROJECTS } from "./projectsData";
 
-const WHATSAPP_NUMBER = "919544348320";
+const WHATSAPP_NUMBER = "+971552522141";
 
 
 
@@ -152,7 +160,7 @@ const SKILLS = [
 
 const EXPERIENCE = [
     {
-        period: "2023 — Present",
+        period: "2023 — 2026",
         role: "Co-Founder & Full-Stack Developer",
         org: "Zypheron Solutions",
         detail:
@@ -881,7 +889,7 @@ function Hero() {
                     </a>
                     <a
                         href="/ashiqcv.pdf"
-                        download="Mohammed_Ashiq_CV.pdf"
+                        download="Mohammed Ashiq - Full Stack Developer.pdf"
                         style={{ border: "1px solid var(--border)", color: "var(--text)", fontFamily: "'Inter', sans-serif" }}
                         className="text-sm font-semibold px-6 py-3 rounded-full hover:bg-white/5 transition flex items-center gap-1.5"
                     >
@@ -1403,8 +1411,26 @@ function Contact() {
                         My inbox is open.
                     </p>
                     <div className="flex flex-col gap-4">
-                        <a href="mailto:ashiqashi8320@gmail.com" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
-                            <Mail size={16} color="var(--accent-2)" /> ashiqashi8320@gmail.com
+                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                            <Flag size={16} color="var(--accent-2)" /> Indian
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                            <User size={16} color="var(--accent-2)" /> Single
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                            <Calendar size={16} color="var(--accent-2)" /> 29/06/2000
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                            <MapPinIcon size={16} color="var(--accent-2)" /> Al Majas-1 ,Sharjah,UAE
+                        </a>
+                        <a href="tel:+971552522141" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                            <Phone size={16} color="var(--accent-2)" /> +971 552522141
+                        </a>
+
+
+
+                        <a href="mailto:ashiqo2012@gmail.com" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                            <Mail size={16} color="var(--accent-2)" /> ashiqo2012@gmail.com
                         </a>
                         <a href="https://github.com/ashiqmhmd" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
                             <Github size={16} color="var(--accent-2)" /> github.com/mohammedashiq
@@ -1412,9 +1438,10 @@ function Contact() {
                         <a href="https://www.linkedin.com/in/mhmdashiq-543776229" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
                             <Linkedin size={16} color="var(--accent-2)" /> linkedin/mhmdashiq
                         </a>
-                        <a href="/ashiqcv.pdf" download="Mohammed_Ashiq_CV.pdf" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                        <a href="/ashiqcv.pdf" download="Mohammed Ashiq - Full Stack Developer.pdf" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
                             <Briefcase size={16} color="var(--accent-2)" /> Download CV / Resume
                         </a>
+
                     </div>
                 </Reveal>
 
