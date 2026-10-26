@@ -886,7 +886,7 @@ function Hero() {
                     </a>
                     <a
                         href="/ashiqcv.pdf"
-                        download="Mohammed Ashiq - Full Stack Developer.pdf"
+                        download="Mohammed Ashiq- Full Stack Developer.pdf"
                         style={{ border: "1px solid var(--border)", color: "var(--text)", fontFamily: "'Inter', sans-serif" }}
                         className="text-sm font-semibold px-6 py-3 rounded-full hover:bg-white/5 transition flex items-center gap-1.5"
                     >
@@ -1453,7 +1453,7 @@ function Contact() {
                         <a href="https://www.linkedin.com/in/mhmdashiq-543776229" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
                             <Linkedin size={16} color="var(--accent-2)" /> linkedin/mhmdashiq
                         </a>
-                        <a href="/ashiqcv.pdf" download="Mohammed Ashiq - Full Stack Developer.pdf" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
+                        <a href="/ashiqcv.pdf" download="Mohammed Ashiq- Full Stack Developer.pdf" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ color: "var(--text-muted)" }}>
                             <Briefcase size={16} color="var(--accent-2)" /> Download CV / Resume
                         </a>
 
