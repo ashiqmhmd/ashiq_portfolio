@@ -158,10 +158,10 @@ const SKILLS = [
 const EXPERIENCE = [
     {
         period: "2023 — 2026",
-        role: "Co-Founder & Full-Stack Developer",
+        role: "React Native & Full-Stack Developer",
         org: "Zypheron Solutions",
         detail:
-            "Co-founded Zypheron Solutions, delivering end-to-end software solutions including cross-platform mobile apps, web applications, backend services, cloud integrations, and database architecture. Collaborated closely with clients to transform ideas into production-ready products."
+            "delivering end-to-end software solutions including cross-platform mobile apps, web applications, backend services, cloud integrations, and database architecture. Collaborated closely with clients to transform ideas into production-ready products."
     },
     {
         period: "2021 — 2023",
@@ -819,7 +819,7 @@ function Hero() {
                     }}
                 />
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent-2)" }} className="text-xs tracking-widest uppercase mb-5 select-none revolve-drop-container cursor-default flex flex-wrap gap-x-2 gap-y-1.5">
-                    {"Co-Founder . Full-Stack Developer · React Native Specialist".split(" ").map((word, wordIdx, wordsArr) => {
+                    {". Full-Stack Developer · React Native Specialist".split(" ").map((word, wordIdx, wordsArr) => {
                         let prevCharsCount = 0;
                         for (let i = 0; i < wordIdx; i++) {
                             prevCharsCount += wordsArr[i].length + 1;
